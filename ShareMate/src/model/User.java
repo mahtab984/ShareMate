@@ -7,7 +7,8 @@ package model;
 import java.util.*;
 
 /**
- *
+ * Represents a user with basic attributes and methods for managing expenses.
+ * 
  * @author c0546948
  */
 public class User {
@@ -18,6 +19,15 @@ public class User {
     private String passwordHash;
     private Date joinDate;
 
+    /**
+     * Constructs a new User object with the specified details.
+     * 
+     * @param userID      the unique ID of the user
+     * @param name        the name of the user
+     * @param email       the email address of the user
+     * @param passwordHash the hashed password of the user
+     * @param joinDate    the date when the user joined
+     */
     public User(int userID, String name, String email, String passwordHash, Date joinDate) {
         this.userID = userID;
         this.name = name;
@@ -25,22 +35,50 @@ public class User {
         this.joinDate = joinDate;
     }
 
-    public void addExpence(Expense expense) {
+    /**
+     * Adds a new expense to the user's account.
+     * 
+     * @param expense the expense to add
+     */
+    public void addExpense(Expense expense) {
         System.out.println("Expense added: " + expense);
     }
 
-    //add viewExpenseHistory method
-    
-    
+    /**
+     * Views the user's expense history.
+     */
+    public void viewExpenseHistory() {
+        // Implementation to view expense history
+        System.out.println("Viewing expense history");
+    }
+
+    /**
+     * Updates the user's profile with the specified name and email.
+     * 
+     * @param name  the new name of the user
+     * @param email the new email address of the user
+     */
     public void updateProfile(String name, String email) {
         this.name = name;
         this.email = email;
-        System.out.println("profile updated");
+        System.out.println("Profile updated");
     }
 
-    public void receiveNotification (Notification notification){
-    System.out.println("Notification: "+ notification );
+    /**
+     * Receives a notification and prints it to the console.
+     * 
+     * @param notification the notification to receive
+     */
+    public void receiveNotification(Notification notification) {
+        System.out.println("Notification: " + notification);
     }
-    
-    
+
+    /**
+     * Gets the name of the user.
+     * 
+     * @return the name of the user
+     */
+    public String getName() {
+        return name;
+    }
 }

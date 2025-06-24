@@ -3,11 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package model;
+  import java.util.*;
 
 /**
- *
+ * Represents a split method for dividing expenses among users.
+ * 
  * @author c0546948
  */
 public class SplitMethod {
-    
+
+    private int methodID;
+    private String type;
+   
 }
