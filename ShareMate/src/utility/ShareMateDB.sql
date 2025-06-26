@@ -1,9 +1,9 @@
 
 -- Drop the database if it exists (optional, for clean setup)
-DROP DATABASE IF EXISTS ShareMateDB;
+DROP DATABASE IF EXISTS sharemate;
 
 -- Create the database
-CREATE DATABASE ShareMateDB;
+CREATE DATABASE sharemate;
 USE ShareMateDB;
 
 -- User Table
