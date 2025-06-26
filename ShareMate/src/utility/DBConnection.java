@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package utility;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
-/**
- *
- * @author c0546948
- */
 public class DBConnection {
-    
+    public static void main(String[] args) {
+        // Change these values as needed
+        String url = "jdbc:mysql://localhost:3306/sharemate";
+        String user = "root"; // or your MySQL username
+        String password = "";
+
+        try {
+            Connection conn = DriverManager.getConnection(url, user, password);
+            System.out.println("✅ Connected to the database!");
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("❌ Connection failed: " + e.getMessage());
+        }
+    }
 }
