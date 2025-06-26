@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS sharemate;
 
 -- Create the database
 CREATE DATABASE sharemate;
-USE ShareMateDB;
+USE sharemate;
 
 -- User Table
 CREATE TABLE User (
