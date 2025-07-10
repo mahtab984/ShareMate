@@ -31,6 +31,7 @@ public class User {
     public User(int userID, String name, String email, String passwordHash, Date joinDate) {
         this.userID = userID;
         this.name = name;
+        this.email = email;
         this.passwordHash = passwordHash;
         this.joinDate = joinDate;
     }
@@ -81,4 +82,11 @@ public class User {
     public String getName() {
         return name;
     }
+    public String getEmail() {
+    return email;
+}
+
+public String getPasswordHash() {
+    return passwordHash;
+}
 }
