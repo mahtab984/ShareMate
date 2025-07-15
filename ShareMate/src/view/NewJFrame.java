@@ -23,6 +23,7 @@ public class NewJFrame extends javax.swing.JFrame {
         main.setLayout(new CardLayout());
         main.add(login, "login");
         main.add(createGroup, "createGroup");
+        main.add(signup, "signup");
     }
 
     /**
@@ -41,11 +42,22 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        goToSignupBtn = new javax.swing.JButton();
         createGroup = new javax.swing.JPanel();
         addMemberBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
+        signup = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        signupBtn = new javax.swing.JButton();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,11 +77,21 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel2.setText("Email address   ");
+        jLabel2.setText("Username");
+        jLabel2.setToolTipText("");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 255));
         jLabel3.setText("Password");
+
+        goToSignupBtn.setBackground(new java.awt.Color(204, 204, 255));
+        goToSignupBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        goToSignupBtn.setText("Sign up");
+        goToSignupBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goToSignupBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login);
         login.setLayout(loginLayout);
@@ -87,14 +109,16 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                             .addComponent(jTextField3)))
                     .addGroup(loginLayout.createSequentialGroup()
-                        .addGap(254, 254, 254)
-                        .addComponent(loginBtn)))
-                .addContainerGap(159, Short.MAX_VALUE))
+                        .addGap(253, 253, 253)
+                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(goToSignupBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(loginBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
         loginLayout.setVerticalGroup(
             loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
+                .addContainerGap(94, Short.MAX_VALUE)
                 .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -104,7 +128,9 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(65, 65, 65)
                 .addComponent(loginBtn)
-                .addGap(216, 216, 216))
+                .addGap(52, 52, 52)
+                .addComponent(goToSignupBtn)
+                .addGap(141, 141, 141))
         );
 
         main.add(login, "card2");
@@ -152,18 +178,94 @@ public class NewJFrame extends javax.swing.JFrame {
 
         main.add(createGroup, "card3");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        signup.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel4.setText("User ID");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel5.setText("Name");
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel7.setText("Email address");
+
+        signupBtn.setBackground(new java.awt.Color(204, 204, 255));
+        signupBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        signupBtn.setText("Sign up");
+        signupBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel8.setText("Password");
+
+        javax.swing.GroupLayout signupLayout = new javax.swing.GroupLayout(signup);
+        signup.setLayout(signupLayout);
+        signupLayout.setHorizontalGroup(
+            signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(signupLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addGap(89, 89, 89)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(jPasswordField1)
+                    .addComponent(jTextField6)
+                    .addComponent(jTextField7))
+                .addGap(171, 171, 171))
+            .addGroup(signupLayout.createSequentialGroup()
+                .addGap(246, 246, 246)
+                .addComponent(signupBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        signupLayout.setVerticalGroup(
+            signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(signupLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addGap(29, 29, 29)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(38, 38, 38)
+                .addGroup(signupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
+                .addComponent(signupBtn)
+                .addContainerGap(110, Short.MAX_VALUE))
+        );
+
+        main.add(signup, "card4");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 619, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 497, Short.MAX_VALUE)
         );
 
-        main.add(jPanel2, "card4");
+        main.add(jPanel1, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,6 +287,18 @@ public class NewJFrame extends javax.swing.JFrame {
         cardLayout.show(main, "createGroup");
         
     }//GEN-LAST:event_loginBtnActionPerformed
+
+    private void signupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBtnActionPerformed
+        // TODO add your handling code here:
+         CardLayout cardLayout = (CardLayout) main.getLayout();
+        cardLayout.show(main, "createGroup");
+    }//GEN-LAST:event_signupBtnActionPerformed
+
+    private void goToSignupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goToSignupBtnActionPerformed
+        // TODO add your handling code here:
+         CardLayout cardLayout = (CardLayout) main.getLayout();
+        cardLayout.show(main, "signup");
+    }//GEN-LAST:event_goToSignupBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,15 +338,26 @@ public class NewJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addMemberBtn;
     private javax.swing.JPanel createGroup;
+    private javax.swing.JButton goToSignupBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     private javax.swing.JPanel login;
     private javax.swing.JButton loginBtn;
     private javax.swing.JPanel main;
+    private javax.swing.JPanel signup;
+    private javax.swing.JButton signupBtn;
     // End of variables declaration//GEN-END:variables
 }
