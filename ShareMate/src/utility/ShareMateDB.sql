@@ -69,4 +69,4 @@ CREATE TABLE Payment (
 
 -- Test Insert (optional)
 INSERT INTO User (name, email, password_hash, join_date, role)
-VALUES ('Oscar', 'oscar@example.com', 'hashedpass123', CURDATE(), 'admin');
+VALUES ('Oscar', 'oscar@example.com', '123', CURDATE(), 'admin');

@@ -88,10 +88,8 @@ public class NewJFrame extends javax.swing.JFrame {
         addExpense = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         SplitEqualllyBtn = new javax.swing.JButton();
         SplitUnequalllyBtn = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
         back4 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
@@ -114,7 +112,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
@@ -123,6 +120,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
+        jComboBox3 = new javax.swing.JComboBox<>();
         balances = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -462,7 +460,7 @@ public class NewJFrame extends javax.swing.JFrame {
         createGroupLayout.setVerticalGroup(
             createGroupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createGroupLayout.createSequentialGroup()
-                .addContainerGap(167, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -585,10 +583,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(204, 204, 255));
         jLabel10.setText("Add expense");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel11.setText("Share expense with");
-
         SplitEqualllyBtn.setBackground(new java.awt.Color(204, 204, 255));
         SplitEqualllyBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         SplitEqualllyBtn.setText("Split expense equally");
@@ -606,8 +600,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 SplitUnequalllyBtnActionPerformed(evt);
             }
         });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         back4.setBackground(new java.awt.Color(204, 204, 255));
         back4.setText("Back");
@@ -648,10 +640,6 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(addExpenseLayout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(addExpenseLayout.createSequentialGroup()
                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(82, 82, 82)
                                 .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -663,15 +651,16 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(188, 188, 188))
             .addGroup(addExpenseLayout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addGroup(addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(SplitEqualllyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SplitUnequalllyBtn))
+                .addGroup(addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addExpenseLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addExpenseLayout.createSequentialGroup()
+                        .addGap(193, 193, 193)
+                        .addGroup(addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SplitUnequalllyBtn)
+                            .addComponent(SplitEqualllyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addExpenseLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(236, 236, 236))
         );
         addExpenseLayout.setVerticalGroup(
             addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -684,17 +673,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(addExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addGap(65, 65, 65)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(SplitEqualllyBtn)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(SplitUnequalllyBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(jButton14)
                 .addGap(18, 18, 18)
                 .addComponent(back4)
@@ -883,6 +868,8 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout splitUnequallyLayout = new javax.swing.GroupLayout(splitUnequally);
         splitUnequally.setLayout(splitUnequallyLayout);
         splitUnequallyLayout.setHorizontalGroup(
@@ -900,10 +887,10 @@ public class NewJFrame extends javax.swing.JFrame {
                                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(58, 58, 58)
                                 .addGroup(splitUnequallyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField13)
                                     .addComponent(jTextField12)
-                                    .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                                    .addComponent(jTextField15)))
+                                    .addComponent(jTextField14)
+                                    .addComponent(jTextField15)
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(splitUnequallyLayout.createSequentialGroup()
@@ -914,7 +901,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(splitUnequallyLayout.createSequentialGroup()
                         .addGap(232, 232, 232)
                         .addComponent(jButton2)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         splitUnequallyLayout.setVerticalGroup(
             splitUnequallyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -930,8 +917,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(splitUnequallyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
                 .addGroup(splitUnequallyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1055,13 +1042,13 @@ public class NewJFrame extends javax.swing.JFrame {
     private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
         // TODO add your handling code here:
          CardLayout cardLayout = (CardLayout) main.getLayout();
-        cardLayout.show(main, "login");
+        cardLayout.show(main, "profile");
     }//GEN-LAST:event_back2ActionPerformed
 
     private void back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back1ActionPerformed
         // TODO add your handling code here:
           CardLayout cardLayout = (CardLayout) main.getLayout();
-        cardLayout.show(main, "");
+        cardLayout.show(main, "profile");
     }//GEN-LAST:event_back1ActionPerformed
 
     private void back4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back4ActionPerformed
@@ -1256,11 +1243,10 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -1295,7 +1281,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
