@@ -37,7 +37,7 @@ public class GroupAdmin extends User {
     /**
      * Creates a recurring expense based on the provided template.
      * 
-     * @param template the expense template to create a recurring expense from
+     * @param expense the expense template to create a recurring expense from
      */
     public void createRecurringExpense(Expense expense) {
         System.out.println("Recurring expense created: " + expense);
